@@ -1,51 +1,58 @@
+/* not using flexbox, using static widths */
+
 #chessboard {
-    border: 1px solid #000;
-    margin: 0 auto;
-    display: flex;
-    width: 90vw;
-    height: 90vw;
-    flex-direction: column;
+    padding: 1rem;
+    width: 640px;
+    height: 640px;
+    border: 1px black solid;
 }
+
 
 .row {
-    justify-content: center;
-    display: flex;
-    flex: 1;
-}
-
-.row:nth-child(even) .column:nth-child(odd) {
-    background-color: black;
+    height: 80px;
 }
 
 .row:nth-child(odd) .column:nth-child(even) {
     background-color: black;
 }
+    /* -webkit-transition: ease-in-out ;
+    transition: ease-in-out ;
+} */
+
+.row:nth-child(even) .column:nth-child(odd) {
+    background-color: black;
+}
+
 
 .column {
-    border: 1px solid #000;
+    width: 80px;
+    height: 80px;
+    float: left;
+    border: 1px rgb(238, 14, 238) solid;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    flex: 1;
 }
-
-.checker.black {
-    background: gray;
-    border: 1px solid gray;
-}
-
-.checker {
-    display: none;
-    border: 1px solid red;
-    height: 98%;
-    width: 98%;
-    background: red;
+.checker{
+    border:2px solid rgb(67, 9, 177);
+    height: 70px;
+    width: 60px;
+    background: rgb(179, 127, 240);
     border-radius: 50%;
     position: relative;
-    top: 50%;
+    top:50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-box-shadow: 0 0 6px 1px black;
-    box-shadow: 0 0 6px 1px black;
-    box-sizing: border-box;
+    -webkit-transform: translate(-50%,-50%);
+    box-shadow:2px 3px 3px rgb(14, 187, 37);
 }
+.checker-black{
+   border:2px solid rgb(179, 127, 240);
+   height: 70px;
+   width: 60px;
+   background: rgb(67, 9, 177);
+   border-radius: 50%;
+   position: relative;
+   top:50%;
+   left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+   box-shadow:2px 3px 3px rgb(14, 187, 37);
+}
+    
