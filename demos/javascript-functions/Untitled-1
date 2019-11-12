@@ -1,0 +1,15 @@
+let counter = 0;
+
+while(true) {
+    let randomNumber;
+
+    if ( randomNumber === 5 ) {
+        console
+        break;
+    } else {
+    }
+         counter++;
+
+}
+
+console.log(counter)

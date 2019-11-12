@@ -7,18 +7,18 @@ function success() {
     return 4;
 }
 
-  function isEven(num) {
+function isEven(num) {
     if (num % 2 === 0) {
-      return success;
+        return success;
     } else {
-      return function() {
-        console.log("The number is not even.");
-      }
+        return function () {
+            console.log("The number is not even.");
+        }
     }
-  }
+}
 
-  let result = isEven(4); // value of result is now the success function
-  //let result = isEven(4); // value of result is now the success function
+let result = isEven(4); // value of result is now the success function
+//let result = isEven(4); // value of result is now the success function
 
-  success();
-  result(); // result is now a function and can be executed to see "The number is even."
+success();
+result(); // result is now a function and can be executed to see "The number is even."
