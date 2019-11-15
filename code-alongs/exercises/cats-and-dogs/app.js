@@ -17,6 +17,12 @@ class Cat extends domesticMammals{
         this.annoyance =screach;
         this.sound = meow;
 }
+eats(){
+    console.log('They love to eat fish and chicken.')
+}
+procreate(){
+    console.log('It is very annoying when a cat is in heat.')
+}
 }
 
 class wildCat extends domesticMammals{
