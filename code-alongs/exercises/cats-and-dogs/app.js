@@ -3,22 +3,20 @@
 class DomesticMammals {
     constructor(lives, babyName, behavior,annoyance){
     this.lives = lives;
-    this.babyName = name;
+    this.babyName = babyName;
     this.behavior = behavior;
     this.annoyance =annoyance;
     }
     }
 
-class Cat extends domesticMammals {
-    super(lives, babyName, behavior,annoyance);
-    constructor(lives, babyName, behavior,annoyance){
-        this.lives = 9;
-        this.babyName = kitten;
-        this.behavior = cuddler;
-        this.annoyance =screach;
-        this.sound = meow;
+class Cat extends DomesticMammals {
+    
+    constructor(lives, babyName, behavior,annoyance,sound){
+        super(lives, babyName, behavior,annoyance)
+        
+        this.sound = sound;
 }
-
+//need to instanciate the class by using new
 eats(){
     console.log('They love to eat fish and chicken.')
 }
@@ -27,16 +25,21 @@ procreate(){
 }
 }
 
-class wildCat extends domesticMammals{
-    constructor(lives, babyName, behavior,annoyance){
+class wildCat extends DomesticMammals{
+    constructor(lives, babyName, behavior,annoyance,social){
         super(lives, babyName, behavior,annoyance);
-        this.lives = 'to many';
-        this.babyName = cub;
-        this.behavior = viscous;        
-        this.social = predator;
+               
+        this.social = social;
     }
 
 danger(){
    console.log ('Wild cats are very dangerous');
 }
 }
+let myCat = new Cat(9, 'mimzy', 'cuddly', 'water', 'screah');
+let secondCat = new Cat(9, 'muttsy', 'loner', 'water', 'meow');
+myCat.eats();
+console.log(myCat.babyName, secondCat.babyName)
+
+let wildCat2 = new wildCat('none','cubby','scary','fierce','loner');
+wildCat2.danger();
