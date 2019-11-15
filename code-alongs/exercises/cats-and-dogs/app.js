@@ -9,7 +9,8 @@ class domesticMammals {
     }
     }
 
-class Cat extends domesticMammals{
+class Cat extends domesticMammals {
+    super(lives, babyName, behavior,annoyance);
     constructor(lives, babyName, behavior,annoyance){
         this.lives = 9;
         this.babyName = kitten;
@@ -17,6 +18,7 @@ class Cat extends domesticMammals{
         this.annoyance =screach;
         this.sound = meow;
 }
+
 eats(){
     console.log('They love to eat fish and chicken.')
 }
