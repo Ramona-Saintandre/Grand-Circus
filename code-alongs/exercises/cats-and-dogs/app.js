@@ -36,4 +36,4 @@ class wildCat extends domesticMammals{
         this.social = predator;
     }
 }
-
+danger()('Wild cats are very dangerous');
