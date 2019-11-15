@@ -15,6 +15,7 @@ class Cat extends domesticMammals{
         this.babyName = kitten;
         this.behavior = cuddler;
         this.annoyance =screach;
+        this.sound = meow;
 }
 }
 
@@ -23,8 +24,7 @@ class wildCat extends domesticMammals{
         super(name,age);
         this.lives = 'to many';
         this.babyName = cub;
-        this.behavior = viscous;
-        this.sound = roar;
+        this.behavior = viscous;        
         this.social = predator;
     }
 }
