@@ -1,6 +1,6 @@
 // **use strict**
 
-class domesticMammals {
+class DomesticMammals {
     constructor(lives, babyName, behavior,annoyance){
     this.lives = lives;
     this.babyName = name;
