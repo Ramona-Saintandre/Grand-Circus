@@ -17,3 +17,15 @@ class Cat extends domesticMammals{
         this.annoyance =screach;
 }
 }
+
+class wildCat extends domesticMammals{
+    constructor(lives, babyName, behavior,annoyance){
+        super(name,age);
+        this.lives = 'to many';
+        this.babyName = cub;
+        this.behavior = viscous;
+        this.sound = roar;
+        this.social = predator;
+    }
+}
+
