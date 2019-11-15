@@ -1,4 +1,4 @@
-// **use strict**
+ 'use strict'
 
 class DomesticMammals {
     constructor(lives, babyName, behavior,annoyance){
@@ -29,11 +29,14 @@ procreate(){
 
 class wildCat extends domesticMammals{
     constructor(lives, babyName, behavior,annoyance){
-        super(name,age);
+        super(lives, babyName, behavior,annoyance);
         this.lives = 'to many';
         this.babyName = cub;
         this.behavior = viscous;        
         this.social = predator;
     }
+
+danger(){
+   console.log ('Wild cats are very dangerous');
 }
-danger()('Wild cats are very dangerous');
+}
