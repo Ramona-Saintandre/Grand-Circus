@@ -30,6 +30,16 @@ let students = [
 ];
 
 // Shuffle group randomly
+students = students.sort( (first, second) => {
+    return Math.floor(randomNumber * 2 - 1);
+});
+// students= students.sort((first, second,) =>{
+//     // let randomNumber = Math.random();
+//     // console.log(randomNumber);
+//     // console.log(Math.floor(randomNumber * 2 -1));
+
+// Math.round(Math.random() * 2 - 1);
+// });
 
 // Divide up into groups of size students.length / instructors.length
 
