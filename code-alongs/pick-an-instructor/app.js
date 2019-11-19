@@ -42,7 +42,13 @@ students = students.sort( (first, second) => {
 // });
 
 // Divide up into groups of size students.length / instructors.length
-
+for (instructor in instructors){
+    const size = Math.floor(students.length /Object.value(instructors).length);
+    const newStudents = students.splice(0,size);
+    instructors[instructor] = newStudents;
+}
+console.log(instructors);
+console.log(students);
 // Account for possible odd number
 
 // Print out the results
