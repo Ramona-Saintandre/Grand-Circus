@@ -50,5 +50,8 @@ for (instructor in instructors){
 console.log(instructors);
 console.log(students);
 // Account for possible odd number
-
+//Add to BJ's array
+if(students.length !== 0){
+    instructors.bj= students[0];
+}
 // Print out the results
