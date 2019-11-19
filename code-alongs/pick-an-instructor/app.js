@@ -33,13 +33,8 @@ let students = [
 students = students.sort( (first, second) => {
     return Math.floor(Math.random() * 2 - 1);
 });
-// students= students.sort((first, second,) =>{
-//     // let randomNumber = Math.random();
-//     // console.log(randomNumber);
-//     // console.log(Math.floor(randomNumber * 2 -1));
-
-// Math.round(Math.random() * 2 - 1);
-// });
+//console.log(students);
+const size = Math.floor(students.length / Object.values(instructors).length);
 
 // Divide up into groups of size students.length / instructors.length
 while (instructor in instructors){

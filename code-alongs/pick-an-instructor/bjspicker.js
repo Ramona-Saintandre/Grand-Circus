@@ -27,7 +27,6 @@ let students = [
     'Ramona SaintAndre',
     'Abigail Lundgren',
     'Samuel Scholtens',
-    'Grant Chirpus'
 ];
 
 // Shuffle group randomly
@@ -47,7 +46,13 @@ for(instructor in instructors) {
 // Account for possible odd number
 // Add to BJ's array
 while ( students.length !== 0 ) {
-    instructors.bj.push(students.pop());
+    for(instructor in instructors) {
+        if ( students.length ) {
+            instructors[instructor].push(students.pop());
+        }
+    }
 }
+
+console.log(instructors);
 
 // Print out the results
