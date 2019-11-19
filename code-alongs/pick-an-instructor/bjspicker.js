@@ -27,32 +27,27 @@ let students = [
     'Ramona SaintAndre',
     'Abigail Lundgren',
     'Samuel Scholtens',
+    'Grant Chirpus'
 ];
 
 // Shuffle group randomly
 students = students.sort( (first, second) => {
     return Math.floor(Math.random() * 2 - 1);
 });
-// students= students.sort((first, second,) =>{
-//     // let randomNumber = Math.random();
-//     // console.log(randomNumber);
-//     // console.log(Math.floor(randomNumber * 2 -1));
 
-// Math.round(Math.random() * 2 - 1);
-// });
+//console.log(students);
+const size = Math.floor(students.length / Object.values(instructors).length);
 
 // Divide up into groups of size students.length / instructors.length
-while (instructor in instructors){
-    const size = Math.floor(students.length /Object.value(instructors).length);
-    const newStudents = students.splice(0,size);
+for(instructor in instructors) {
+    const newStudents = students.splice(0, size);
     instructors[instructor] = newStudents;
 }
-console.log(instructors);
-console.log(students);
+
 // Account for possible odd number
-//Add to BJ's array
-if(students.length !== 0){
-    instructors.bj.push= students.pop();
+// Add to BJ's array
+while ( students.length !== 0 ) {
+    instructors.bj.push(students.pop());
 }
+
 // Print out the results
-console.log(students);
