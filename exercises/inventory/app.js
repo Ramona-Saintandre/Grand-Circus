@@ -2,18 +2,18 @@ class Store {
     constructor() {
         // Array of Objects
         this.inventory = [
-           new Computer ("Lenova",1200),
-           new Computer ("Dell",850),
-           new Laptop ("HP envy",900),
-           new Laptop ("Apple",1500),
-           new HDMI ("mini", 25),
-           new HDMI ("Type-C",54),
-           new Sticker ("single",1),
-           new Sticker ("pack",12),
-           new MountainDew ("Code Red",1),
-           new MountainDew ("Diet",2),
-           new Monitor ("15in",79),
-           new Monitor ("32in",400), 
+            new Computer("Lenova", 1200),
+            new Computer("Dell", 850),
+            new Laptop("HP envy", 900),
+            new Laptop("Apple", 1500),
+            new HDMI("mini", 25),
+            new HDMI("Type-C", 54),
+            new Sticker("single", 1),
+            new Sticker("pack", 12),
+            new MountainDew("Code Red", 1),
+            new MountainDew("Diet", 2),
+            new Monitor("15in", 79),
+            new Monitor("32in", 400),
         ];
     }
 
@@ -21,8 +21,8 @@ class Store {
         this.inventory.push(product);
     }
 
-    removeProduct = (product) => {
-this.inventory.splice(product);
+    removeProduct = (productIndex) => {
+        this.inventory.splice(productIndex,1);
     }
 
     // Get an array of all of the computer objects
