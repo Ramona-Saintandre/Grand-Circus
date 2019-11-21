@@ -11,7 +11,7 @@ class Store {
     }
 
     removeProduct = (product) => {
-this.inventory.pop(product);
+this.inventory.splice(product);
     }
 
     // Get an array of all of the computer objects
