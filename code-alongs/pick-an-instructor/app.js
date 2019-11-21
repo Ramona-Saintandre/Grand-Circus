@@ -31,23 +31,29 @@ let students = [
 
 // Shuffle group randomly
 students = students.sort( (first, second) => {
-    return Math.floor(Math.random() * 2 - 1);
+    return Math.ceil(Math.random() * 2 - 1);
 });
+
 //console.log(students);
 const size = Math.floor(students.length / Object.values(instructors).length);
 
 // Divide up into groups of size students.length / instructors.length
-while (instructor in instructors){
-    const size = Math.floor(students.length /Object.value(instructors).length);
-    const newStudents = students.splice(0,size);
+for(instructor in instructors) {
+    const newStudents = students.splice(0, size);
     instructors[instructor] = newStudents;
 }
-console.log(instructors);
-console.log(students);
+
 // Account for possible odd number
-//Add to BJ's array
-if(students.length !== 0){
-    instructors.bj.push= students.pop();
+// Add to BJ's array
+while ( students.length !== 0 ) {
+    for(instructor in instructors) {
+        if ( students.length ) {
+            instructors[instructor].push(students.pop());
+        }
+    }
 }
+
+console.log(instructors);
+
 // Print out the results
 console.log(students);
