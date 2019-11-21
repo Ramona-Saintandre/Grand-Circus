@@ -13,6 +13,22 @@ class Store {
     removeProduct = (product) => {
 
     }
+
+    // Get an array of all of the computer objects
+    getComputers() {
+        this.inventory.filter( (item) => {
+            if ( isComputer ) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+    }
+
+    // Get an array of all of the laptop objects
+    getLaptops() {
+
+    }
 }
 
 class Product {
@@ -60,6 +76,15 @@ class MountainDew extends Product {
 }
 
 let dell = new Laptop();
-console.log(dell instanceof Laptop);
-console.log(dell instanceof Computer);
-console.log(dell instanceof Product);
+// console.log(dell instanceof Laptop);
+// console.log(dell instanceof Computer);
+// console.log(dell instanceof Product);
+
+let store = new Store();
+// add products
+
+// get all laptops
+
+// remove a specific product
+
+// get the price of a specific product
