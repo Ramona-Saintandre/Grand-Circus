@@ -2,7 +2,7 @@ class Store {
     constructor() {
         // Array of Objects
         this.inventory = [
-"computer","laptop","sticker","HDMI","Monitor","Mountain Dew"
+            "computer", "laptop", "sticker", "HDMI", "Monitor", "Mountain Dew",
         ];
     }
 
@@ -11,13 +11,13 @@ class Store {
     }
 
     removeProduct = (product) => {
-
+this.inventory.pop(product);
     }
 
     // Get an array of all of the computer objects
     getComputers() {
-        this.inventory.filter( (item) => {
-            if ( isComputer ) {
+        this.inventory.filter((item) => {
+            if (isComputer) {
                 return true;
             } else {
                 return false;
