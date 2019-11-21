@@ -2,7 +2,7 @@ class Store {
     constructor() {
         // Array of Objects
         this.inventory = [
-
+"computer","laptop","sticker","HDMI","Monitor","Mountain Dew"
         ];
     }
 
