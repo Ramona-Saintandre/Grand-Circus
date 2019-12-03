@@ -1,20 +1,31 @@
-"use strict"; {
+"use strict"
+{
     const button = document.querySelector('#clickable-button');
     let buttonText;
-    console.log(button);
-    button.addEventListener('click', event => {
+
+    const buttonHandler = event => {
+
         const button = event.target;
 
-        const isClicked = event.dataset.clicked;
+        const isClicked = button.dataset.clicked;
 
-        if (!isClicked || isClicked === 'false') {
+        if ( !isClicked || isClicked === 'false' ) {
             buttonText = button.innerText;
 
             button.innerText = 'Clicked...';
-            event.dataset.clicked = true;
+            button.dataset.clicked = true;
         } else {
             button.innerText = buttonText;
             button.dataset.clicked = false;
         }
-    });
+    }
+    button.addEventListener('click', buttonHandler);
+
+    const stopClickButton = document.querySelector('#stop-clicking');
+    stopClickButton.addEventListener('click', () => {
+      button.removeEventListener('click', buttonHandler);
+      button.addEventListener('click', () => {
+          alert('STOP CLICKING THE BUTTON');
+      })
+    })
 }
