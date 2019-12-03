@@ -1,4 +1,4 @@
-"use strict" {
+"use strict"; {
     const button = document.querySelector('#clickable-button');
     let buttonText;
     console.log(button);
