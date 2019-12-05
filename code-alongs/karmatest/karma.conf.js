@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Wed Dec 04 2019 20:41:29 GMT-0500 (Eastern Standard Time)
+// Generated on Wed Dec 04 2019 21:15:01 GMT-0500 (Eastern Standard Time)
 
 module.exports = function(config) {
   config.set({
@@ -14,11 +14,18 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: ["src/*.js", "test/*.js"],
+    files: [
+      'test-main.js',
+      { pattern: 'script.js', included: false },
+      { pattern: 'scripts.test.js', included: false },
+      { pattern: '.js', included: false },
+      { pattern: '*js', included: false }
+    ],
 
 
     // list of files / patterns to exclude
     exclude: [
+      '*js'
     ],
 
 
@@ -48,7 +55,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // start these browsers
@@ -62,12 +69,6 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity,
-
-    plugins: [
-      require("karma-chrome-launcher"),
-      require("karma-jasmine"),
-      require("karma-spec-reporter")
-    ]
+    concurrency: Infinity
   })
 }
