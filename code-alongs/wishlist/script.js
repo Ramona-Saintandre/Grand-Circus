@@ -1,24 +1,34 @@
 "use strict"
-
 {
     const wishListAddForm = document.querySelector('#wishlist-add');
-    wishListAddForm.addEventListener('submit', e =>{
-       e.preventDefault(); 
 
-       const itemToAdd = document.querySelector('#item-to-add');
-       if (itemToAdd)
-       // creating a <li>
-       const itemHTML = document.createElement('li');
+    wishListAddForm.addEventListener('submit', e => {
+        e.preventDefault();
 
-       itemHTML.classList.add('list-item');
+        const itemToAdd = document.querySelector('#item-to-add');
 
-       // <li class="list-item"> Text from the input in Here </li>
-       itemHTML.innerText = itemToAdd.value;
+        if (itemToAdd.value && isNaN(itemToAdd.value)) {
+            // <li></li>
+            const itemHTML = document.createElement('li');
 
-       const wishlist = document.querySelector('wishlist');
+            // <li class="list-item"></li>
+            itemHTML.classList.add('list-item');
 
-       wishList.appendChild(itemHTML);
+            // <li class="list-item"> Text from the input in Here </li>
+            itemHTML.innerText = itemToAdd.value;
 
-       console.log(itemToAdd.value);
+            itemHTML.addEventListener('click', e => {
+                itemHTML.classList.toggle('completed');
+            });
+
+            itemHTML.addEventListener('dblclick', e => {
+                itemHTML.remove();
+            });
+
+            const wishList = document.querySelector('#wishlist');
+
+            wishList.appendChild(itemHTML);
+            itemToAdd.value = 'Pizza';
+        }
     });
 }

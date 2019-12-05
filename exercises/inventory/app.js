@@ -1,3 +1,25 @@
+// let store = {
+//     inventory: [
+//         'a',
+//         'b',
+//         'c'
+//     ],
+//     name: 'MY store',
+//     addProduct() {
+
+//     },
+//     getProductByName() {
+
+//     },
+//     removeProduct() {
+
+//     }
+// }
+
+// console.log(store.inventory);
+// console.log(store.name);
+
+
 class Store {
     constructor(inventory) {
         // Array of Objects
@@ -151,4 +173,3 @@ console.log(store.getProductByName('Spiderman'));
 // get the price of a specific product
 console.log(store.getProductByName('Spiderman')[0].getPrice());
 console.log(store.getProductByName('Chromebook')[0].getPrice());
-
