@@ -1,11 +1,16 @@
 {
   "name": "karma",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "g": "^2.0.1",
+    "karma-cli": "^2.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
 }
