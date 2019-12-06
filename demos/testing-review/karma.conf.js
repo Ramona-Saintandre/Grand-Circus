@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Thu Dec 05 2019 19:09:07 GMT-0500 (Eastern Standard Time)
+// Generated on Thu Dec 05 2019 19:12:25 GMT-0500 (Eastern Standard Time)
 
 module.exports = function(config) {
   config.set({
@@ -15,7 +15,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      "src/*.js", "test/*.js"
     ],
 
 
@@ -29,11 +28,7 @@ module.exports = function(config) {
     preprocessors: {
     },
 
-    plugins: [
-      require("karma-chrome-launcher"),
-      require("karma-jasmine"),
-      require("karma-spec-reporter")
-      ],
+
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
