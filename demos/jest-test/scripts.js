@@ -1,13 +1,24 @@
 class RaceCar {
     constructor() {
+        this.speed = 0;
+        this.color = 'red';
     }
 
-    vroom() {
+    changeColor(color) {
+        this.color = color;
     }
 
-    brakes() {
+    vroom(speed = 1) {
+        if ( speed > 0)
+            this.speed += speed;
+    }
+
+    brakes(speed = 1) {
+        if ( speed > 0)
+            this.speed -= speed;
     }
 
     stop() {
+        this.speed = 0;
     }
 }

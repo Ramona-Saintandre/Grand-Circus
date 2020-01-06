@@ -14,9 +14,9 @@ describe("RaceCar", () => {
 
     it("Should be able to increase by a named value", () => {
         const car = new RaceCar();
-        car.vroom(5);
+        car.vroom(4);
 
-        expect(car.speed).toEqual(5);
+        expect(car.speed).toEqual(4);
     })
 
     it("Should be able to increase multiple times", () => {
@@ -30,7 +30,7 @@ describe("RaceCar", () => {
     it("Vroom should only accelerate", () => {
         const car = new RaceCar();
         car.vroom();
-        car.vroom(-1);
+       car.vroom(-1);
 
         expect(car.speed).toEqual(1);
     })

@@ -1,7 +1,13 @@
 "use strict"
 {
+    document.addEventListener('click', () => {
+        alert('there was a click');
+    })
+
     const ul = document.querySelector('ul');
     ul.addEventListener( 'click', e => {
+        // Prevent bubbling...
+        e.stopPropagation();
         alert('ul was clicked!!!');
     });
 
