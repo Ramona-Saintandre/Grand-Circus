@@ -38,4 +38,11 @@ element.remove(); // it's that easy
 /*
     Append new elements to an existing DOM element
 */
+const node = document.createElement('li');
+node.innerText = 'This is my new LI';
+node.classList.add('blue');
+node.classList.add('red');
+
+<a class="blue red"></a>
+
 element.appendChild(node);
