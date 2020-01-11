@@ -19,3 +19,6 @@ console.log(numArr);
 var strNumTuple;
 strNumTuple = ['Hello', 4, 6, 8, 12];
 console.log(strNumTuple);
+// void/undefined/null
+var myVoid = undefined;
+console.log(myVoid);

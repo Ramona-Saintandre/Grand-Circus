@@ -25,3 +25,8 @@ strNumTuple = ['Hello',4,6,8,12]
 console.log(strNumTuple);
 
 
+// void/undefined/null
+
+let myVoid: void = undefined;
+console.log(myVoid);
+
