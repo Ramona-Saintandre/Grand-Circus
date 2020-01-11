@@ -18,4 +18,10 @@ console.log(myNum);
 console.log(strArr);
 console.log(numArr);
 
+// Tupal
+
+let strNumTuple:[string,number]
+strNumTuple = ['Hello',4,6,8,12]
+console.log(strNumTuple);
+
 
